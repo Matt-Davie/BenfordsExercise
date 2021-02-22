@@ -46,9 +46,8 @@ with open(inputpath, 'r') as f:
             data[j,i]=firstdigit(float(data[j,i]))
 
     #now to count
-    counts=[]
     unique, counts = np.unique(data.flatten(), return_counts=True)
-    if int(unique[0])==0: #trim zeroes
+    if int(unique[0])==0: #trim zero as it is irrelevant for Benford's
         counts=counts[1:]
     total_count=np.sum(counts)
 
