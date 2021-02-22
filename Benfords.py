@@ -53,8 +53,8 @@ with open(inputpath, 'r') as f:
     data_percentage=[(i/total_count)*100 for i in counts]
     data_percentage=np.around(data_percentage,1) #1dp
 
-    Benfords=[np.log10(1+1/i)*100 for i in range(1,10)] #predicted values
-    Benfords=np.around(Benfords,1) #1dp
+    benfords=[np.log10(1+1/i)*100 for i in range(1,10)] #predicted values
+    benfords=np.around(benfords,1) #1dp
 
     print(data_percentage)
-    print(Benfords)
+    print(benfords)
