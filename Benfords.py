@@ -7,6 +7,7 @@
 #display benfords ratios
 
 #assumptions: values can be floats - this means -ve, -1<x<1, including zero
+#decide how to handle -ve: make +ve
 #decide how to handle zero : return 0
 #decide how to handle -1<x<1 : return 1st non-zero integer
 
@@ -15,19 +16,17 @@ import csv
 
 inputpath = 'BenfordTestData.csv'
 
-Output=[]
-
-def firstdigit(n):
+def firstdigit(n): #finding the first non-zero integer digit
     if n<0:
         n=n*(-1) #no more negatives
     if n==0:
-        return int(0) #return zero if zero
+        return int(0) #return zero if zero - not much can be done here, we'll skip it later.
     if n<1:
         for i in str(n)[2:]:
             if int(i)>0:
                 return int(i) #return first non-zero for cases like 0.40
     else:
-        return int(str(n)[0])
+        return int(str(n)[0]) #just that first digit
 
 #load this file
 with open(inputpath, 'r') as f:
