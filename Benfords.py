@@ -33,8 +33,6 @@ with open(inputpath, 'r') as f:
     reader = csv.reader(f, delimiter=',')
     headers = next(reader)
     data = np.array(list(reader))
-    #print(headers)
-    #print(data.shape) #now we know that we have to work with
 
     #get rid of index column
     data=data[:,1:]
