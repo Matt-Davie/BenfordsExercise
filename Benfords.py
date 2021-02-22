@@ -59,13 +59,10 @@ def main(input_file = 'BenfordTestData.csv'):
         #  1dp
         benfords=np.around(benfords,1)
 
-        #  Raw data
-        #  print(data_percentage)
-        #  print(benfords)
+        #  Output data
+        print(data_percentage)
+        print(benfords)
 
-        #  Pretty data
-        print('[' + ', '.join(map(str, data_percentage)) + ']')
-        print('[' + ', '.join(map(str, benfords)) + ']')
 
 def firstdigit(n):
     """
