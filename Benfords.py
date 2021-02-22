@@ -22,7 +22,7 @@ def firstdigit(n): #finding the first non-zero integer digit
     if n==0:
         return int(0) #return zero if zero - not much can be done here, we'll skip it later.
     if n<1:
-        for i in str(n)[1:]: #skip '0.' then iterate
+        for i in str(n)[2:]: #skip '0.' then iterate
             if int(i)>0:
                 return int(i) #return first non-zero for cases like 0.40
     else:
