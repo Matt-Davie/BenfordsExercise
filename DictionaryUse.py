@@ -15,6 +15,8 @@ def main(input_file = 'BenfordTestData.csv'):
     #  Create absolute path of file
     input_path = script_dir + '\\' + input_file
     
+    
+    stats = {}
     with open(input_path, 'r') as f:
         reader = csv.reader(f, delimiter=',')
         #  Remove CSV header
@@ -28,7 +30,7 @@ def main(input_file = 'BenfordTestData.csv'):
         #  Get 1st entries
         for i in range(data.shape[1]):
             for j in range(data.shape[0]):
-                data[j,i]=firstdigit(float(data[j,i]))
+                data[j,i]=
 
 
 stats = {}
